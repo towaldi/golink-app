@@ -48,6 +48,7 @@ body {
 .menu-item-active {
     background-color: #E6F4FF;
     border-right: 2px solid #1677FF;
+    color: #1677FF !important;
 }
 
 
