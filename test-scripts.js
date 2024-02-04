@@ -138,3 +138,125 @@
 
 // // Instanz der Klasse erstellen
 // const menuItemManager = new MenuItemManager();
+
+
+
+
+// const collapseExtendBtn = document.getElementById('collapse-extend-btn');
+
+// collapseExtendBtn.addEventListener('click', event => {
+//     const img = collapseExtendBtn.querySelector('img');
+//     const src = img.src;
+
+//     if (src.includes('keyboard_double_arrow_left_24dp')) {
+//         menuItemLinks.forEach(menuItem => {
+//             menuItem.style.width = 'fit-content';
+//             const h4Element = menuItem.querySelectorAll('h4');
+//             h4Element.forEach(h4 => {
+//                 h4.style.display = 'none';
+//             });
+//         });
+//     } else {
+
+//     }
+
+//     console.log(src);
+// });
+
+
+
+
+// const menuItemLinks = document.querySelectorAll('.menu-item');
+// const windowPathname = window.location.pathname;
+
+// console.log(menuItemLinks);
+
+// menuItemLinks.forEach(menuItem => {
+
+//     if (menuItem.href.includes(windowPathname)) {
+//         setTimeout(() => {
+//             menuItem.classList.add('menu-item-active');
+//             const img = menuItem.querySelector('img');
+//             const src = img.getAttribute('src');
+//             const newSrc = src.replace('.svg', '_blue.svg');
+//             img.setAttribute('src', newSrc);
+//         }, 24);
+//     }
+// });
+
+
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <!-- link css -->
+//     <link rel="stylesheet" href="../style.css">
+//     <title>GoLink | Kanban Project Managment Tool</title>
+// </head>
+
+// <body >
+//     <!-- nav drawer -->
+//     <header class="nav-drawer">
+//         <!-- nav-list-items-->
+//         <div class="nav-list-items">
+//             <!-- logo -->
+//             <div class="logo">
+//                 <img src="../sources/img/icon_golink.svg" alt="">
+//                 <h1>GoLink</h1>
+//             </div>
+//             <a class="menu-item" href="../pages/summary.html">
+//                 <img src="../sources/img/summary_24dp.svg" alt="summary">
+//                 <h4>Summary</h4>
+//             </a>
+//             <a class="menu-item" href="../pages/add-task.html">
+//                 <img src="../sources/img/add_task_24dp.svg" alt="add task">
+//                 <h4>Add Task</h4>
+//             </a>
+//             <a class="menu-item" href="../pages/board.html">
+//                 <img src="../sources/img/board_24dp.svg" alt="board">
+//                 <h4>Board</h4>
+//             </a>
+//             <a class="menu-item" href="../pages/contacts.html">
+//                 <img src="../sources/img/contacts_24dp.svg" alt="contacts">
+//                 <h4>Contact</h4>
+//             </a>
+//         </div>
+//         <div>
+//             <a class="menu-item" href="../pages/privacy-policy.html">
+//                 <img src="../sources/img/policy_24dp.svg" alt="policy">
+//                 <h4>Privacy Policy</h4>
+//             </a>
+//             <a class="menu-item" href="../pages/legal-notice.html">
+//                 <img src="../sources/img/copyright_24dp.svg" alt="legal">
+//                 <h4>Legal notice</h4>
+//             </a>
+//         </div>
+//     </header>
+
+//     <main class="main">
+//         <!-- toolbar -->
+//         <div class="toolbar">
+//             <h4>Kanban Project Management Tool</h4>
+//             <!-- help & user -->
+//             <div class="help-user">
+//                 <button class="btn-icon">
+//                     <img src="../sources/img/help_24dp.svg" alt="help">
+//                 </button>
+//                 <div class="user">
+//                     <img src="../sources/img/avatar_man_1.svg" alt="avatar">
+//                     <h4>John Doe</h4>
+//                 </div>
+//             </div>
+//         </div>
+
+//         <!-- content -->
+
+//     </main>
+
+//     <!-- link js -->
+//     <script src="../navbar.js"></script>
+// </body>
+// </html>

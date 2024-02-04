@@ -1,7 +1,7 @@
 /* ==========================================================================
    reset all
    ========================================================================== */
-* {
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -24,7 +24,6 @@ main {
     width: 100%;
 }
 
-
 /* ==========================================================================
    components
    ========================================================================== */
@@ -35,7 +34,6 @@ main {
     /* display & box model */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: fit-content;
     padding: 0.5rem;
@@ -44,7 +42,25 @@ main {
     border-right: 1px solid #F0F0F0;
 }
 
-.menu-item {
+.logo {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem 2rem 0.5rem;
+}
+
+.nav {
+    /* display & box model */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav li {
     /* display & box model */
     display: flex;
     flex-direction: row;
@@ -59,119 +75,26 @@ main {
     transition: all 0.1s ease-in-out;
 }
 
-.menu-item:hover {
+nav li:hover {
+    /* other */
     background-color: #E6F4FF;
 }
 
-.menu-item-active {
-    background-color: #E6F4FF;
-    color: #1677FF !important;
-}
-
-.menu-item-links {
+nav li a {
     /* display & box model */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
     /* other */
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-}
-
-/* logo
-   ========================================================================== */
-.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0.5rem 2rem 0.5rem;
-}
-
-/* buttons
-   ========================================================================== */
-.btn-icon {
-    /* display & boy model */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    /* other */
-    background-color: transparent;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-}
-
-.btn-icon:hover {
-    /* other */
-    background-color: #E5E5E5;
-}
-
-/* toolbar
-   ========================================================================== */
-.toolbar {
-    /* display & box model */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem ;
-    /* other */
-    background-color: #fff;
-    border-bottom: 1px solid #F0F0F0;
-}
-
-.help-user {
-    /* display & box model */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.user {
-    /* display & box model */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.25rem 0.5rem;
-    gap: 0.5rem;
-    /* other */
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-}
-
-.user:hover {
-    /* other */
-    background-color: #E5E5E5;
-}
-
-
-/* ==========================================================================
-   styles
-   ========================================================================== */
-a, 
-a:link,
-a:hover,
-a:visited,
-a:focus,
-a:active {
     text-decoration: none;
-    color: #000;
 }
 
 
 /* ==========================================================================
    font
    ========================================================================== */
-h1, h4 {
+h1, h4, a {
     font-family: 'Public Sans';
 }
 
@@ -180,9 +103,10 @@ h1 {
     font-size: 1.375rem;
 }
 
-h4 {
+h4, a {
     font-weight: 500;
     font-size: 0.875rem;
+    color: #000;
 }
 
 /* implementation
