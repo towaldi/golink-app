@@ -86,9 +86,62 @@ a {
 }
 
 .active-link {
+    /* other */
     background-color: #E6F4FF;
     color: #1677FF;
 }
+
+
+/* toolbar
+   ========================================================================== */
+.toolbar {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    /* other */
+    background-color: #fff;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.help-account-container {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon-btn,
+.user-btn {
+    /* display & box model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    /* other */
+    background-color: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.icon-btn:hover,
+.user-btn:hover {
+    /* other */
+    background-color: #F0F0F0;
+}
+
+.user-btn {
+    /* display & box model */
+    padding: 0.25rem 0.5rem;
+    gap: 0.5rem;
+}
+
 
 /* ==========================================================================
    font
