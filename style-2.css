@@ -60,7 +60,7 @@ main {
     height: 100%;
 }
 
-nav li {
+.list-item {
     /* display & box model */
     display: flex;
     flex-direction: row;
@@ -75,21 +75,20 @@ nav li {
     transition: all 0.1s ease-in-out;
 }
 
-nav li:hover {
+.list-item:hover {
     /* other */
     background-color: #E6F4FF;
 }
 
-nav li a {
-    /* display & box model */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+a {
     /* other */
     text-decoration: none;
 }
 
+.active-link {
+    background-color: #E6F4FF;
+    color: #1677FF;
+}
 
 /* ==========================================================================
    font

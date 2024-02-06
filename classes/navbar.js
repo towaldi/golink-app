@@ -16,13 +16,13 @@ class NavBar {
     constructor() {
         this.renderNavBar();
         this.renderPrimaryItems();
-        this.renderSecondaryItems()
+        this.renderSecondaryItems();
+        this.detectActiveItem()
     }
 
 
     renderNavBar() {
         const navDrawer = document.getElementById('nav-drawer');
-        // navDrawer.innerHTML = '';
         navDrawer.innerHTML += this.createNavStructure();
     }
 
@@ -68,11 +68,31 @@ class NavBar {
 
 
     createLiElement(item) {
-        return /*html*/ `<li>
+        return /*html*/ `<a class="list-item" href="${item.url}">
                             <img src="${item.icon}">
-                            <a href="${item.url}">${item.text}</a>
-                        </li>`;
+                            ${item.text}
+                        </a>`;
     }
+
+
+    detectActiveItem() {
+        const currentPath = window.location.pathname;
+        const liItems = document.querySelectorAll('.list-item');
+        
+        liItems.forEach(item => {
+            if (item.href.includes(currentPath)) {
+                setTimeout(() => {
+                    item.classList.add('active-link');
+
+                    const img = item.querySelector('img');
+                    const src = img.getAttribute('src');
+                    const newSrc = src.replace('.svg', '_blue.svg');
+                    img.setAttribute('src', newSrc);
+
+                }, 12);
+            }
+        });
+    }  
 }
 
 const navDrawer = new NavBar();
