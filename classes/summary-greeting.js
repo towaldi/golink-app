@@ -4,12 +4,12 @@
 class SummaryGreeting {
 
     /**
-     * 
+     * Object vairable for the date
      */
     currentDate = new Date();
     
     /**
-     * creates a new 'SummaryGreeting' instance
+     * Creates a new 'SummaryGreeting' instance
      * -> executes all render/update methods
      */
     constructor() {
@@ -20,7 +20,7 @@ class SummaryGreeting {
     }
 
     /**
-     * method renders "greeting" container
+     * Method renders "greeting" container
      */
     renderGreetingContainer() {
         const greetingContainer = document.getElementById('greeting');
@@ -35,7 +35,7 @@ class SummaryGreeting {
     }
 
     /**
-     * renders the current date
+     * Renders the current date
      */
     renderCurrentDate() {
         const htmlDateString = document.getElementById('current-date');
@@ -43,7 +43,7 @@ class SummaryGreeting {
     }
 
     /**
-     * updates the clock (every second)
+     * Updates the clock (every second)
      */
     updateClock() {
         const htmlTimeString = document.getElementById('current-time');
@@ -56,7 +56,7 @@ class SummaryGreeting {
     }
 
     /**
-     * updates greeting all 15 min (90000 milliseconds)
+     * Updates greeting all 15 min (90000 milliseconds)
      */
     updateGreeting() {
         const htmlGreetingElement = document.getElementById('user-greeting');
@@ -74,7 +74,7 @@ class SummaryGreeting {
     }
 
     /**
-     * returns the formatted date string
+     * Returns the formatted date string
      * @returns {string}
      */
     getFormattedDateString() {
@@ -83,7 +83,7 @@ class SummaryGreeting {
     }
 
     /**
-     * returns the formatted time string
+     * Returns the formatted time string
      * @returns {string}
      */
     getFormattedTime() {
@@ -100,7 +100,7 @@ class SummaryGreeting {
 
 
     /**
-     * generates "greeting" based on time of the day
+     * Generates "greeting" based on time of the day
      * @returns {string} - greeting text
      */
     generateGreeting() {
@@ -117,6 +117,7 @@ class SummaryGreeting {
 
 
 /**
- * creates instance of the 'SummaryGreeting'-class + assings it to variable 'greetingContainer'
+ * Creates an instance of the 'SummaryGreeting' class and assigns it to the variable 'greetingContainer'.
+ * @type {SummaryGreeting}
  */
 const greetingContainer = new SummaryGreeting();
