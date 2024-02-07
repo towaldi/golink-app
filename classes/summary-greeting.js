@@ -10,13 +10,13 @@ class SummaryGreeting {
     
     /**
      * creates a new 'SummaryGreeting' instance
-     * -> execute 'renderGreetingContainer()' method
-     * -> execute 'renderCurrentDate()' method
+     * -> executes all render/update methods
      */
     constructor() {
         this.renderGreetingContainer();
         this.renderCurrentDate();
         this.updateClock();
+        this.updateGreeting();
     }
 
     /**
@@ -52,10 +52,25 @@ class SummaryGreeting {
             this.currentDate = new Date();
             const formattedTime = this.getFormattedTime();
             htmlTimeString.innerHTML = /*html*/ `${formattedTime}`;
-
-            const greeting = this.generateGreeting();
-            document.getElementById('user-greeting').innerHTML = greeting;
         }, 1000);
+    }
+
+    /**
+     * updates greeting all 15 min (90000 milliseconds)
+     */
+    updateGreeting() {
+        const htmlGreetingElement = document.getElementById('user-greeting');
+
+        const updateGreetingText = () => {
+            const greeting = this.generateGreeting();
+            htmlGreetingElement.innerHTML = /*html*/ `${greeting}`;
+        }
+
+        updateGreetingText();
+
+        setInterval(() => {
+            updateGreetingText();
+        }, 90000);
     }
 
     /**
