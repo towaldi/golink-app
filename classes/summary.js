@@ -8,11 +8,6 @@ class Summary {
         const summaryContainer = document.getElementById('content-summary');
         summaryContainer.innerHTML += /*html*/ `<!-- greeting -->
                                                 <div id="greeting" class="greeting-container">
-                                                    <div class="greeting-text">
-                                                        <h3 id="user-greeting">Good morning,</h3>
-                                                        <h2 id="user-name">John Doe</h2>
-                                                    </div>
-                                                    <button class="card-btn">Account</button>
                                                 </div>
                                                 <!-- dashboard -->
                                                 <div id="content-dashboard" class="content-dashboard">
