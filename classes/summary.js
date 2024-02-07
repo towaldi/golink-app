@@ -4,6 +4,7 @@ class Summary {
         this.renderSummaryCointainer();
     }
 
+    
     renderSummaryCointainer() {
         const summaryContainer = document.getElementById('content-summary');
         summaryContainer.innerHTML += /*html*/ `<!-- greeting -->
