@@ -1,17 +1,23 @@
 class SummaryGreeting {
 
+    /**
+     * 
+     */
     currentDate = new Date();
-    currentDayOfMonth = this.currentDate.getDate();
-    currentMonth = this.currentDate.getMonth() + 1;
-    currentYear = this.currentDate.getFullYear();
-
     
+    /**
+     * creates a new 'SummaryGreeting' instance
+     * -> execute 'renderGreetingContainer()' method
+     * -> execute 'renderCurrentDate()' method
+     */
     constructor() {
         this.renderGreetingContainer();
-        this.detectDayTimeperiod();
+        this.renderCurrentDate();
     }
 
-
+    /**
+     * method renders "greeting" container
+     */
     renderGreetingContainer() {
         const greetingContainer = document.getElementById('greeting');
         greetingContainer.innerHTML += /*html*/ `<!-- greeting -->
@@ -23,22 +29,19 @@ class SummaryGreeting {
                                                 <button class="card-btn">Account</button>`;
     }
 
-
-    detectDayTimeperiod() {
+    /**
+     * renders the current date
+     * -> using the '.toLocaleDateString()' method
+     */
+    renderCurrentDate() {
         const htmlDateString = document.getElementById('current-date');
         htmlDateString.innerHTML = '';
 
-        const dateString = this.renderDateString(this.currentDayOfMonth, this.currentMonth, this.currentYear);
+        const options = {weekday: 'short', day: 'numeric', month: 'long', year: 'numeric'}
+        const dateString = this.currentDate.toLocaleDateString('en-US', options);
+
         htmlDateString.innerHTML += dateString;
     }
-
-
-    renderDateString(currentDayOfMonth, currentMonth, currentYear) {
-        const twoDigitDay = (currentDayOfMonth < 10) ? `0${currentDayOfMonth}`: currentDayOfMonth;
-        const twoDigitMonth = (currentMonth < 9) ? `0${currentMonth}`: currentMonth; 
-        return /*html*/ `today is the ${twoDigitDay}.${twoDigitMonth}.${currentYear}`;
-    }
-
 }
 
 const greetingContainer = new SummaryGreeting();
