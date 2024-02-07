@@ -12,7 +12,7 @@ class ToolBar {
 
 
     createToolBarStructure() {
-        return /*html*/ `<h4>Kanban Project Managment Tool</h4>
+        return /*html*/ `<h6>Kanban Project Managment Tool</h6>
                         <div class="help-account-container">
                             <button class="icon-btn">
                                 <img src="../sources/img/help_24dp.svg" alt="help">
@@ -20,7 +20,7 @@ class ToolBar {
                             <!-- user -->
                             <button class="user-btn">
                                 <img src="../sources/img/avatar_man_1.svg" alt="help">
-                                <h4>John Doe</h4>
+                                <h6>John Doe</h6>
                             </button>
                         </div>`;
     }
