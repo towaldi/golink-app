@@ -1,5 +1,13 @@
+/**
+ * 'NavBar' represents the "navbar" section in all html pages
+ */
 class NavBar {
 
+    /**
+     * Arrays with 'primaryListItem' objects
+     * -> 'primaryListItem'
+     * -> 'secondaryListItem'
+     */
     primaryListItems = [
         {icon: '../sources/img/summary_24dp.svg', text: 'Summary', url: '../pages/summary.html'},
         {icon: '../sources/img/add_task_24dp.svg', text: 'Add Task', url: '../pages/add-task.html'},
@@ -12,7 +20,10 @@ class NavBar {
         {icon: '../sources/img/copyright_24dp.svg', text: 'Legal Notice', url: '../pages/legal-notice.html'}
     ];
 
-
+    /**
+     * Creates a new 'NavBar' instance
+     * -> executes all render/detect methods
+     */
     constructor() {
         this.renderNavBar();
         this.renderPrimaryItems();
@@ -20,13 +31,17 @@ class NavBar {
         this.detectActiveItem()
     }
 
-
+    /**
+     * Method render navbar container
+     */
     renderNavBar() {
         const navDrawer = document.getElementById('nav-drawer');
         navDrawer.innerHTML += this.createNavStructure();
     }
 
-
+    /**
+     * Renders 'primaryListItems'
+     */
     renderPrimaryItems() {
         const liItems = document.getElementById('primary-list-items');
         liItems.innerHTML = '';
@@ -37,7 +52,9 @@ class NavBar {
         });
     }
 
-
+    /**
+     * Renders  'secondaryListItems'
+     */
     renderSecondaryItems() {
         const liItems = document.getElementById('secondary-list-items');
         liItems.innerHTML = '';
@@ -48,7 +65,10 @@ class NavBar {
         });
     }
 
-
+    /**
+     * Creates the navigation structure HTML code.
+     * @returns {string} - The HTML code for the navigation structure, including logo, primary, and secondary navigation elements.
+     */
     createNavStructure() {
         return /*html*/ `<!-- logo -->
                         <div class="logo">
@@ -66,7 +86,11 @@ class NavBar {
                         </nav>`;
     }
 
-
+    /**
+     * Creates a list item HTML code based on the provided item data
+     * @param {*} item - The data object representing the item
+     * @returns {string} - The HTML code for the list item
+     */
     createLiElement(item) {
         return /*html*/ `<a class="list-item" href="${item.url}">
                             <img src="${item.icon}">
@@ -74,7 +98,11 @@ class NavBar {
                         </a>`;
     }
 
-
+    /**
+     * Detects the active list item base on the current window location and updates its styling
+     * -> Assumes that each list item has a class 'list-item' and an anchor tag containing an 'href' attribute
+     * -> Also assumes that list item icons are represented by 'img' tags with 'src' attributes.
+     */
     detectActiveItem() {
         const currentPath = window.location.pathname;
         const liItems = document.querySelectorAll('.list-item');
@@ -95,4 +123,8 @@ class NavBar {
     }  
 }
 
+/**
+ * Creates an instance of the 'NavBar' class and assigns it to the variable 'navDrawer'.
+ * @type {NavBar}
+ */
 const navDrawer = new NavBar();
