@@ -153,6 +153,8 @@ a {
 .dashboard-row {
     /* display & box model */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: row;
     width: 100%;
     gap: 1rem;
@@ -164,7 +166,7 @@ a {
     flex-direction: row;
     align-items: flex-start;
     min-height: 10rem;
-    width: 100%;
+    width: calc(50% - 1rem);
     padding: 1rem;
     gap: 1rem;
     /* other */

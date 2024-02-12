@@ -4,7 +4,7 @@ class Summary {
         this.renderSummaryCointainer();
     }
 
-    
+
     renderSummaryCointainer() {
         const summaryContainer = document.getElementById('content-summary');
         summaryContainer.innerHTML += /*html*/ `<!-- greeting -->
@@ -13,27 +13,7 @@ class Summary {
                                                 <!-- dashboard -->
                                                 <div id="content-dashboard" class="content-dashboard">
 
-                                                    <!-- row -->
-                                                    <div class="dashboard-row">
-                                                        <!-- dashboard card-->
-                                                        <div id="dashboard-todo" class="dashboard-card">
-                                                            <img src="../sources/img/task_40dp.svg" alt="">
-                                                            <div class="d-card-text">
-                                                                <h4>1</h4>
-                                                                <p class="text-tertiary">This displays the "To Do's" that have to be done.</p>
-                                                            </div>
-                                                            <img src="../sources/img/arrow_right_24dp.svg" alt="">
-                                                        </div>
-                                                        <!-- dashboard card-->
-                                                        <div id="dashboard-done" class="dashboard-card">
-                                                            <img src="../sources/img/task_done_40dp.svg" alt="">
-                                                            <div class="d-card-text">
-                                                                <h4>1</h4>
-                                                                <p class="text-tertiary">This displays the task that are "Done".</p>
-                                                            </div>
-                                                            <img src="../sources/img/arrow_right_24dp.svg" alt="">
-                                                        </div>
-                                                    </div>
+                                                    
 
                                                     <!-- row -->
                                                     <div class="dashboard-row">
@@ -77,7 +57,8 @@ class Summary {
                                                                 </div>
                                                                 <img src="../sources/img/arrow_right_24dp.svg" alt="">
                                                             </div>
-                                                        </div>`;
+                                                        </div>
+                                                </div>`;
     }
 }
 
