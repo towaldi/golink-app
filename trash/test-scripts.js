@@ -340,3 +340,39 @@
 //                     </div>
 //                 </div>
 //             </div>
+
+
+
+
+
+// <!-- tasks -->
+//                 <div class="task">
+//                     <div class="task-content">
+//                         <div class="task-header">
+//                             <h6>Task Header</h6>
+//                             <img src="../sources/img/avatar_man_2.svg" alt="">
+//                         </div>
+//                         <p class="text-tertiary">Description</p>
+//                     </div>
+//                     <!-- prio + category -->
+//                     <div class="task-info">
+//                         <img class="icon-24x24" src="../sources/img/prio_high_24dp.svg" alt="">
+//                         <div class="category-chip">Category 1</div>
+//                     </div>
+//                 </div>
+
+// <!-- tasks -->
+//                 <div class="task">
+//                     <div class="task-content">
+//                         <div class="task-header">
+//                             <h6>Task Header</h6>
+//                             <img class="icon-24x24" src="../sources/img/prio_low_24dp.svg" alt="">
+//                         </div>
+//                         <p class="text-tertiary">Description</p>
+//                     </div>
+//                     <!-- prio + category -->
+//                     <div class="task-header">
+//                         <div class="category-chip">Category 1</div>
+//                         <img src="../sources/img/avatar_man_2.svg" alt="">
+//                     </div>
+//                 </div>
