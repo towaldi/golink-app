@@ -26,8 +26,8 @@ class SummaryGreeting {
         const greetingContainer = document.getElementById('greeting');
         greetingContainer.innerHTML += /*html*/ `<!-- greeting -->
                                                 <div class="greeting-text">
-                                                    <h3 id="user-greeting"></h3>
-                                                    <h2 id="user-name">John Doe</h2>
+                                                    <h3 id="user-greeting" class="text-white"></h3>
+                                                    <h2 id="user-name" class="text-white">John Doe</h2>
                                                     <h3 id="current-date" class="text-light-white-opacity"></h3>
                                                     <h3 id="current-time" class="text-light-white-opacity"></h3>
                                                 </div>

@@ -17,6 +17,73 @@
         <!-- toolbar -->
         <div id="toolbar" class="toolbar"></div>
         <!-- content -->
+        <div id="add-task-container" class="add-task-container">
+            <h3>Add Task</h3>
+            <!-- inputfields -->
+            <form class="inputfields-add-task" action="" method="get">
+                <div class="inputfields-column">
+                    <!-- title -->
+                    <div class="inputfield">
+                        <label for="title">Title<span class="text-red"> *</span></label>
+                        <input type="text" name="title" id="task-title" placeholder="Enter title" required>
+                    </div>
+                    <!-- description -->
+                    <div class="inputfield">
+                        <label for="description">Description</label>
+                        <textarea type="text" name="description" id="task-description" placeholder="Enter description"></textarea>
+                    </div>
+                    <!-- assignement -->
+                    <div class="inputfield">
+                        <label for="assignment">Assigned to</label>
+                        <select name="users" id="user-task-select">
+                            <option value="" disabled selected hidden>Choose user</option>
+                            <option value="user-1">User 1</option>
+                            <option value="user-2">User 2</option>
+                            <option value="user-3">User 3</option>
+                        </select>
+                    </div>
+                    <!-- due date -->
+                    <div class="inputfield">
+                        <label for="date">Due date<span class="text-red"> *</span></label>
+                        <input type="date" name="due-date" id="task-due-date" required>
+                    </div>
+                </div>
+                <div class="inputfields-column">
+                    <!-- prio -->
+                    <div class="inputfield">
+                        <label for="prio">Prio</label>
+                        <div class="prio-btns">
+                            <button class="prio-btn prio-high"><img src="../sources/img/prio_high_24dp.svg" alt="">High</button>
+                            <button class="prio-btn prio-medium"><img src="../sources/img/prio_medium_24dp.svg" alt="">Medium</button>
+                            <button class="prio-btn prio-low"><img src="../sources/img/prio_low_24dp.svg" alt="">Low</button>
+                        </div>
+                    </div>
+                    <!-- category -->
+                    <div class="inputfield">
+                        <label for="category">Category<span class="text-red"> *</span></label>
+                        <select name="category" id="task-category" required>
+                            <option value="" disabled selected hidden>Choose category</option>
+                            <option value="category-1">Category 1</option>
+                            <option value="category-2">Category 2</option>
+                            <option value="category-3">Category 3</option>
+                        </select>
+                    </div>
+                    <!-- subtasks -->
+                    <div class="inputfield">
+                        <label for="subtasks">Subtasks</label>
+                        <input type="subtask" name="subtask" id="task-subtask">
+                    </div>
+                    <!-- subtasks list -->
+                    <div id="subtasks-list"></div>
+                </div>
+            </form>
+            <!-- action buttons -->
+            <div class="action-btns">
+                <button class="action-btn secondary">Clear</button>
+                <button class="action-btn primary">Create Task</button>
+            </div>
+        </div>
+
     </main>
 
     <!-- link js -->
